@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+:root {
+    --bs-indigo: #6610f2;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #f17945;
+    --bs-secondary: #343661;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --font-weigth-500: 500;
+    --font-weigth-700: 700;
+    --font-size-14: 14px;
+    --font-size-18: 18px;
+    --font-size-46: 46px;
+    --font-size-20: 20px;
+    --font-size-30: 30px;
+    --font-size-60: 60px;
+}
+
+.App {
+    width: 100%;
+    overflow: hidden;
+}
+
+.button button {
+    width: 118px;
+    height: 37px;
+    border-radius: 37px;
+    background-color: var(--bs-primary);
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-14);
+    color: var(--bs-light);
+    font-weight: var(--font-weigth-500);
+    &:hover {
+        background-color: var(--bs-gray-500);
+        color: var(--bs-white);
+    }
+}
+
+.name__info {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weigth-700);
+    color: var(--bs-dark);
+    margin-bottom: 25px;
+}
