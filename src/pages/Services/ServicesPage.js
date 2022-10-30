@@ -5,7 +5,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import ListServices from "../../components/ListServices/ListServices";
 import HeaderServices from "../../components/ListServices/HeaderServices";
 import ItemService from "../../components/ListServices/ItemService";
-// import PostService from "../../components/Post/PostService";
+import PostService from "../../components/Post/PostService";
 import Post from "../../components/Post/Post";
 import PostList from "../../components/Post/PostList";
 
@@ -26,7 +26,16 @@ function ServicesPage(props) {
                 country, in which roasted parts of sentences fly into your mouth."
             />
             <ListServices>
-                <HeaderServices heading="Our Philosphy" />
+                <HeaderServices heading="Featured Servicwes" />
+                <List>
+                    <ItemService images={ImgSvg1} name="Tourism" />
+                    <ItemService images={ImgSvg2} name="Package Tours" />
+                    <ItemService images={ImgSvg3} name="Travel Insurance" />
+                    <ItemService images={ImgSvg4} name="Airport Lounge Access" />
+                </List>
+            </ListServices>
+            <ListServices bgc="var(--bs-gray-400)">
+                <HeaderServices heading="Featured Servicwes" />
                 <List>
                     <ItemService images={ImgSvg1} name="Tourism" />
                     <ItemService images={ImgSvg2} name="Package Tours" />
@@ -39,7 +48,7 @@ function ServicesPage(props) {
                 </List>
             </ListServices>
             <Post>
-                {/* <PostService /> */}
+                <PostService />
                 <PostList />
             </Post>
             <Footer />

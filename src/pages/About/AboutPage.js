@@ -24,7 +24,7 @@ function AboutPage(props) {
                 which roasted parts of sentences fly into your mouth."
             />
             <Review />
-            <ListServices>
+            <ListServices bgc="var(--bs-gray-400)">
                 <HeaderServices heading="Our Philosphy" />
                 <List>
                     <ItemService images={ImgSvg1} name="Tourism" />

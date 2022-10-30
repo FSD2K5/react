@@ -35,7 +35,7 @@ function HomePage(props) {
                 sentences fly into your mouth."
             />
             <Review />
-            <ListServices>
+            <ListServices bgc="var(--bs-gray-400)">
                 <HeaderServices heading="Our Services" />
                 <List>
                     <ItemService images={ImgSvg1} name="Tourism" />
