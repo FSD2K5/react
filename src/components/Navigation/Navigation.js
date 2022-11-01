@@ -13,16 +13,16 @@ function Navigation(props) {
                     </Link>
                 </div>
                 <nav className="navigation">
-                    <NavLink className="navLink" exact={true} end to="/">
+                    <NavLink className="navLink" exact="true" end to="/">
                         Home
                     </NavLink>
-                    <NavLink className="navLink" exact={true} end to="/about">
+                    <NavLink className="navLink" exact="true" end to="/about">
                         About Us
                     </NavLink>
-                    <NavLink className="navLink" exact={true} end to="/service">
+                    <NavLink className="navLink" exact="true" end to="/service">
                         Services
                     </NavLink>
-                    <NavLink className="navLink" exact={true} end to="/blog">
+                    <NavLink className="navLink" exact="true" end to="/blog">
                         Blog
                     </NavLink>
                 </nav>

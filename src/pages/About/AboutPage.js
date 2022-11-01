@@ -6,6 +6,8 @@ import Review from "../../components/Review/Review";
 import ListServices from "../../components/ListServices/ListServices";
 import HeaderServices from "../../components/ListServices/HeaderServices";
 import ItemService from "../../components/ListServices/ItemService";
+import PositionTeam from "../../components/PositionTeam/PositionTeam";
+import Infoteam from "../../components/InfoTeam/Infoteam";
 
 import ImgSvg1 from "../../assets/images/01.svg";
 import ImgSvg2 from "../../assets/images/02.svg";
@@ -33,6 +35,8 @@ function AboutPage(props) {
                     <ItemService images={ImgSvg4} name="Airport Lounge Access" />
                 </List>
             </ListServices>
+            <Infoteam />
+            <PositionTeam />
             <Footer />
         </div>
     );

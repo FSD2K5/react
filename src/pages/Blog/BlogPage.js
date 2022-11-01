@@ -4,6 +4,7 @@ import Banner from "../../components/Banner/Banner";
 import Footer from "../../components/Footer/Footer";
 import Post from "../../components/Post/Post";
 import PostList from "../../components/Post/PostList";
+import PostNav from "../../components/Post/PostNav";
 
 function BlogPage(props) {
     return (
@@ -18,6 +19,7 @@ function BlogPage(props) {
             <Post>
                 <PostList />
                 <PostList />
+                <PostNav />
             </Post>
             <Footer />
         </div>

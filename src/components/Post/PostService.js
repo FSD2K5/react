@@ -35,6 +35,9 @@ const Wrapper = styled.div`
         font-size: var(--font-size-14);
         font-weight: var(--font-weigth-500);
         color: var(--bs-gray);
+        @media screen and (max-width: 1100px) {
+            max-width: 100%;
+        }
     }
 `;
 
