@@ -1,9 +1,28 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
 
 function Navigation(props) {
+    useEffect(() => {
+        const menuOpen = document.querySelector(".menu");
+        const menuClose = document.querySelector(".close");
+        const navMobile = document.querySelector(".navigation-mobile");
+        const listNav = document.querySelectorAll(".navigation-mobile > .navLink");
+        menuOpen.addEventListener("click", (e) => {
+            navMobile.classList.remove("close-action");
+        });
+        menuClose.addEventListener("click", (e) => {
+            navMobile.classList.add("close-action");
+        });
+        listNav.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                navMobile.classList.remove("close-action");
+            });
+        });
+    }, []);
     return (
         <Wrapper>
             <div className="container">
@@ -25,6 +44,23 @@ function Navigation(props) {
                     <NavLink className="navLink" exact="true" end to="/blog">
                         Blog
                     </NavLink>
+                </nav>
+                <nav className="navigation-mobile close-action">
+                    <NavLink className="navLink" exact="true" end to="/">
+                        Home
+                    </NavLink>
+                    <NavLink className="navLink" exact="true" end to="/about">
+                        About Us
+                    </NavLink>
+                    <NavLink className="navLink" exact="true" end to="/service">
+                        Services
+                    </NavLink>
+                    <NavLink className="navLink" exact="true" end to="/blog">
+                        Blog
+                    </NavLink>
+                    <button className="close">
+                        <AiOutlineClose />
+                    </button>
                 </nav>
                 <div className="menu">
                     <HiMenu />
@@ -80,6 +116,50 @@ const Wrapper = styled.div`
             .active {
                 color: var(--bs-white);
             }
+        }
+        .navigation-mobile {
+            display: none;
+            padding: 50px 30px;
+            width: 80%;
+            background-color: var(--bs-white);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            transition: all 500ms linear;
+            @media screen and (max-width: 600px) {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .navLink {
+                font-size: var(--font-size-20);
+                font-weight: var(--font-weigth-500);
+                color: var(--bs-gray);
+                text-decoration: none;
+                &:hover {
+                    color: var(--bs-white);
+                }
+            }
+            .active {
+                color: var(--bs-primary);
+            }
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: var(--font-size-30);
+                color: var(--bs-dark);
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+        .close-action {
+            transform: translateX(100%);
+            transition: all 500ms linear;
         }
         .menu {
             font-size: 40px;

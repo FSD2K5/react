@@ -15,6 +15,7 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 import HeadingPost from "../../components/Post/HeadingPost";
 import PostList from "../../components/Post/PostList";
 import Post from "../../components/Post/Post";
+import Questions from "../../components/Questions/Questions";
 
 // import assets
 import ImgSvg1 from "../../assets/images/01.svg";
@@ -45,6 +46,7 @@ function HomePage(props) {
                 </List>
             </ListServices>
             <Slider />
+            <Questions />
             <Memories />
             <Testimonials />
             <Post>

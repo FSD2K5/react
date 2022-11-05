@@ -1,20 +1,18 @@
 import styled from "styled-components";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 function PostNav(props) {
-    const [click, setClick] = useState(true);
     useEffect(() => {
         const btn = document.querySelectorAll(".btn-nav");
         btn.forEach((item) => {
             item.onclick = () => {
-                setClick(!click);
                 btn.forEach((item) => {
                     item.classList.remove("active");
                 });
                 item.classList.add("active");
             };
         });
-    }, [click]);
+    }, []);
     return (
         <Wrapper>
             <button className="btn-nav active">1</button>
